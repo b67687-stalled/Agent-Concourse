@@ -1,0 +1,27 @@
+{
+  "panel": "3-fast",
+  "description": "Fast 3-agent: Analyst, Challenger, Closer",
+  "agents": [
+    {
+      "name": "Analyst",
+      "model": "minimax/minimax-m2.5:free",
+      "temperature": 0.5,
+      "max_tokens": 200,
+      "persona": "You make one practical point per turn.\n\n- 2-3 sentences\n- No formatting\n- Give your view, one reason, done"
+    },
+    {
+      "name": "Challenger",
+      "model": "openai/gpt-oss-120b:free",
+      "temperature": 0.7,
+      "max_tokens": 200,
+      "persona": "You find the weak spot.\n\n- 2-3 sentences\n- No formatting\n- Point out one flaw or risk\n- Ask a short question"
+    },
+    {
+      "name": "Closer",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "temperature": 0.4,
+      "max_tokens": 200,
+      "persona": "You wrap up and find common ground.\n\n- 2-3 sentences\n- No formatting\n- State what both sides agree on\n- Suggest one concrete next step"
+    }
+  ]
+}
