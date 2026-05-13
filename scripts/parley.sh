@@ -19,6 +19,7 @@
 # =============================================================================
 
 set -euo pipefail
+trap 'echo "[ERROR] $BASH_SOURCE:$LINENO"' ERR
 
 # === Paths ===
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
